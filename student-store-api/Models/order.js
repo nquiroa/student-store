@@ -61,7 +61,7 @@ const calculateOrderTotal = async (orderId) => {
         throw new Error('Order not found');
     }
 
-    const total = order.orderItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
+    const total = order.orderItems.reduce((acc, item) => Math.round(((acc + item.price * item.quantity) * 1.0875) * 100) / 100 , 0);
 
     return total;
 };

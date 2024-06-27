@@ -46,7 +46,7 @@ function App() {
 
     const totalPrice = Object.keys(cart).reduce((total, item) => {
       const product = products.find(product => product.id === parseInt(item));
-      return total + (product.price * cart[item]) * 1.0875;
+      return (((total + (product.price * cart[item]) * 1.0875) * 100) / 100);
     }, 0);
 
     const order = {

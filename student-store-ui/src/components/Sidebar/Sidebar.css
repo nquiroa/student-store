@@ -51,7 +51,7 @@
 }
 
 .past-orders-button button {
-  background-color: #007bff;
+  background-color: rgba(255, 255, 255, 0);
   color: white;
   border: none;
   padding: 10px 20px;

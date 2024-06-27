@@ -56,31 +56,46 @@ Deployed Application (optional): [Student Store Deployed Site](ADD_LINK_HERE)
 
 ### Walkthrough Video
 
-`TODO://` Add the embedded URL code to your animated app walkthrough below, `ADD_EMBEDDED_CODE_HERE`. Make sure the video or gif actually renders and animates when viewing this README. (🚫 Remove this paragraph after adding walkthrough video)
+<div>
+    <a href="https://www.loom.com/share/5e21cb6641594ebaa151a12bc7c5c513">
+      <p>Loom Message - 27 June 2024 - Watch Video</p>
+    </a>
+    <a href="https://www.loom.com/share/5e21cb6641594ebaa151a12bc7c5c513">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/5e21cb6641594ebaa151a12bc7c5c513-with-play.gif">
+    </a>
+</div>
 
-`ADD_EMBEDDED_CODE_HERE`
+<div>
+    <a href="https://www.loom.com/share/84128f91ab0943aa8f792942a1d21871">
+      <p>Loom Message - 27 June 2024 - Watch Video</p>
+    </a>
+    <a href="https://www.loom.com/share/84128f91ab0943aa8f792942a1d21871">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/84128f91ab0943aa8f792942a1d21871-with-play.gif">
+    </a>
+</div>
+Second video is an updated video of the POST orders api endpoint, I inserted a product id wrong!
 
 ### Reflection
 
 * Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
 
-Add your response here
+The topics discussed in the labs provided a strong foundation for understanding key concepts needed to complete the assignment. Specifically, the labs on RESTful API design, Express routing, and database interactions using Prisma were instrumental in building the backend API. However, I felt somewhat unprepared for implementing complex filtering and sorting functionalities due to limited coverage in the labs. Additionally, integrating frontend and backend components seamlessly posed challenges that were not extensively covered.
 
 * If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
   
-Add your response here
+If I had more time, I would have added more advanced filtering and sorting options for the product listings to enhance user experience. I would also focus on implementing robust error handling and validation across the API to ensure more reliable and user-friendly interactions. Additionally, I would have liked to integrate user authentication and authorization features to secure the application. Improving the UI/UX design to make the frontend more intuitive and visually appealing would also be a priority.
 
 * Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
-Add your response here
+The project demo went well overall, with the core functionalities working as expected and a smooth demonstration of the product browsing and order placement features. However, there were some minor issues with the responsiveness of the frontend and occasional delays in API responses. I noticed that a peer implemented a more dynamic search and filter feature, which provided instant feedback as users typed, and I would like to try incorporating a similar feature in the future. 
 
 ### Open-source libraries used
 
-- 
+- W3schools
 
 ### Shout out
 
 Give a shout out to somebody from your cohort that especially helped you during your project. This can be a fellow peer, instructor, TA, mentor, etc.
 
-shoutout to Erika and Alex
+shoutout to Erika and Alex!
 

@@ -1,19 +1,28 @@
-import { Link } from "react-router-dom"
-import ShoppingCart from "../ShoppingCart/ShoppingCart"
-import logo from "../../assets/codepath.svg"
-import "./Sidebar.css"
+import { Link } from "react-router-dom";
+import ShoppingCart from "../ShoppingCart/ShoppingCart";
+import logo from "../../assets/codepath.svg";
+import "./Sidebar.css";
 
-
-function Sidebar({ cart, isOpen, products, userInfo, setUserInfo, toggleSidebar, handleOnCheckout,isCheckingOut, order, setOrder,error,}) {
+function Sidebar({
+  cart,
+  isOpen,
+  products,
+  userInfo,
+  setUserInfo,
+  toggleSidebar,
+  handleOnCheckout,
+  isCheckingOut,
+  order,
+  setOrder,
+  error,
+}) {
   return (
     <section className={`Sidebar ${isOpen ? "open" : "closed"}`}>
-
       <div className="wrapper">
-
         <div className="logo">
-            <Link to="/">
-              <img src={logo} alt="codepath logo" />
-            </Link>
+          <Link to="/">
+            <img src={logo} alt="codepath logo" />
+          </Link>
         </div>
 
         <span className={`toggle-button button ${isOpen ? "open" : "closed"}`} onClick={toggleSidebar}>
@@ -33,10 +42,15 @@ function Sidebar({ cart, isOpen, products, userInfo, setUserInfo, toggleSidebar,
           order={order}
           setOrder={setOrder}
         />
-        
+
+        <div className="past-orders-button">
+          <Link to="/orders" onClick={toggleSidebar}>
+            <button>Past Orders</button>
+          </Link>
+        </div>
       </div>
     </section>
-  )
+  );
 }
 
 export default Sidebar;

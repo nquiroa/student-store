@@ -6,12 +6,12 @@ import Sidebar from "../Sidebar/Sidebar";
 import Home from "../Home/Home";
 import ProductDetail from "../ProductDetail/ProductDetail";
 import NotFound from "../NotFound/NotFound";
+import OrdersPage from "../OrdersPage";
+import OrderDetailsPage from "../OrderDetailsPage";
 import { removeFromCart, addToCart, getQuantityOfItemInCart, getTotalItemsInCart } from "../../utils/cart";
 import "./App.css";
 
 function App() {
-
-  // State variables
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState("All Categories");
   const [searchInputValue, setSearchInputValue] = useState("");
@@ -23,22 +23,67 @@ function App() {
   const [error, setError] = useState(null);
   const [order, setOrder] = useState(null);
 
-  // Toggles sidebar
-  const toggleSidebar = () => setSidebarOpen((isOpen) => !isOpen);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        setIsFetching(true);
+        const response = await axios.get("http://localhost:3000/products");
+        setProducts(response.data);
+        setIsFetching(false);
+      } catch (error) {
+        setError(error.message);
+        setIsFetching(false);
+      }
+    };
 
-  // Functions to change state (used for lifting state)
+    fetchData();
+  }, []);
+
+  const handleOnCheckout = async () => {
+    setIsCheckingOut(true);
+    console.log('Cart:', cart);
+    console.log('Products:', products);
+
+    const totalPrice = Object.keys(cart).reduce((total, item) => {
+      const product = products.find(product => product.id === parseInt(item));
+      return total + (product.price * cart[item]) * 1.0875;
+    }, 0);
+
+    const order = {
+      customer_id: userInfo.name,
+      total_price: totalPrice,
+      status: "Pending",
+      orderItems: Object.keys(cart).map(productid => {
+        const product = products.find(product => product.id === parseInt(productid));
+        return {
+          product_id: product.id,
+          quantity: cart[productid],
+          price: product.price,
+        };
+      }),
+    };
+
+    console.log('Order being sent:', order);
+
+    try {
+      const response = await axios.post("http://localhost:3000/orders", order);
+      console.log('Response from server:', response.data);
+      setOrder(response.data);
+      setCart({});
+      setIsCheckingOut(false);
+    } catch (error) {
+      console.error('Error during checkout:', error.message);
+      setError(error.message);
+      setIsCheckingOut(false);
+    }
+  };
+
+  const toggleSidebar = () => setSidebarOpen((isOpen) => !isOpen);
   const handleOnRemoveFromCart = (item) => setCart(removeFromCart(cart, item));
   const handleOnAddToCart = (item) => setCart(addToCart(cart, item));
   const handleGetItemQuantity = (item) => getQuantityOfItemInCart(cart, item);
   const handleGetTotalCartItems = () => getTotalItemsInCart(cart);
-
-  const handleOnSearchInputChange = (event) => {
-    setSearchInputValue(event.target.value);
-  };
-
-  const handleOnCheckout = async () => {
-  }
-
+  const handleOnSearchInputChange = (event) => setSearchInputValue(event.target.value);
 
   return (
     <div className="App">
@@ -85,7 +130,7 @@ function App() {
               }
             />
             <Route
-              path="/:productId"
+              path="/products/:productId"
               element={
                 <ProductDetail
                   cart={cart}
@@ -97,6 +142,8 @@ function App() {
                 />
               }
             />
+            <Route path="/orders" element={<OrdersPage />} />
+            <Route path="/orders/:orderId" element={<OrderDetailsPage />} />
             <Route
               path="*"
               element={
@@ -116,4 +163,3 @@ function App() {
 }
 
 export default App;
- 

@@ -18,6 +18,16 @@ const createOrder = async (req, res) => {
     }
 };
 
+const getOrderByStudentId = async (req, res) => {
+    const studentId = req.params.customer_id;
+    try {
+        const orders = await orderModel.getOrderByStudentId(studentId);
+        res.status(200).json(orders);
+    } catch (error) {
+        res.status(400).json({ error: error.message });
+    }
+};
+
 const getAllOrders = async (req, res) => {
     try {
         const orders = await orderModel.getAllOrders();
@@ -112,6 +122,7 @@ const getItemsInOrder = async (req, res) => {
 };
 
 module.exports = {
+    getOrderByStudentId,
     getItemsInOrder,
     additemtoOrder,
     calculateOrderTotal,

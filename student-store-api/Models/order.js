@@ -1,4 +1,5 @@
 const { PrismaClient } = require("@prisma/client");
+const { get } = require("../Routes/orderRoutes");
 const prisma = new PrismaClient();
 
 const createOrder = async (orderData) => {
@@ -65,6 +66,14 @@ const calculateOrderTotal = async (orderId) => {
     return total;
 };
 
+const getOrderByStudentId = async (customerId) => {
+    return prisma.order.findMany({
+        where: {
+            customer_id: customerId,
+        },
+    });
+};
+
 module.exports = {
     createOrder,
     getAllOrders,
@@ -73,4 +82,5 @@ module.exports = {
     deleteOrder,
     addItemToOrder,
     calculateOrderTotal,
+    getOrderByStudentId,
 };

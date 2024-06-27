@@ -18,4 +18,6 @@ router.get("/:order_id/items", orderController.getItemsInOrder);
 
 router.get("/:order_id/total", orderController.calculateOrderTotal);
 
+router.get("/student/:customer_id", orderController.getOrderByStudentId);
+
 module.exports = router;

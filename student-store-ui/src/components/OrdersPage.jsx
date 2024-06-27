@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import './OrdersPage.css';
 
 const OrdersPage = () => {
   const [orders, setOrders] = useState([]);
@@ -20,14 +21,17 @@ const OrdersPage = () => {
   }, []);
 
   return (
-    <div>
+    <div className="orders-page">
       <h1>Past Orders</h1>
-      {error && <p>Error: {error}</p>}
-      <ul>
+      {error && <p className="error">{error}</p>}
+      <ul className="orders-list">
         {orders.map((order) => (
-          <li key={order.order_id}>
+          <li key={order.order_id} className="order-item">
             <Link to={`/orders/${order.order_id}`}>
-              Order #{order.order_id} - Total: ${order.total_price.toFixed(2)}
+              <div className="order-info">
+                <p><strong>Order #{order.order_id}</strong></p>
+                <p>Total: ${order.total_price.toFixed(2)}</p>
+              </div>
             </Link>
           </li>
         ))}

@@ -51,8 +51,9 @@ function App() {
 
     const order = {
       customer_id: userInfo.name,
+      setUserInfo: userInfo.dorm_number,
       total_price: totalPrice,
-      status: "Pending",
+      status: "Complete",
       orderItems: Object.keys(cart).map(productid => {
         const product = products.find(product => product.id === parseInt(productid));
         return {
@@ -71,6 +72,7 @@ function App() {
       setOrder(response.data);
       setCart({});
       setIsCheckingOut(false);
+      setUserInfo({ name: "", dorm_number: ""});
     } catch (error) {
       console.error('Error during checkout:', error.message);
       setError(error.message);

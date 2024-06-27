@@ -31,9 +31,9 @@ const getOrderById = async (req, res) => {
     const orderId = req.params.id;
     try {
         const order = await orderModel.getOrderById(orderId);
-        const orderItems = await orderItemModel.getOrderItemsInOrder(orderId);
         if (order) {
-            res.status(200).json(order);
+            const orderItems = await orderItemModel.getOrderItemsInOrder(orderId);
+            res.status(200).json({...order, orderItems });
         } else {
             res.status(404).json({ error: 'Order not found' });
         }

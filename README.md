@@ -50,8 +50,8 @@ Deployed Application (optional): [Student Store Deployed Site](ADD_LINK_HERE)
   - [ ] Allow users to use an input to filter orders by the email of the person who placed the order.
 - [ ] **Implement Your Own Frontend**
   - [ ] Build your own user interface for browsing products, managing the shopping cart, and placing orders. This will involve integrating the frontend you create with the backend API you developed during the project.
-- [ ] **Past Orders Page**
-  - [ ] Build a page in the UI that displays the list of all past orders. The user should be able to click on any individual order to take them to a more detailed page of the transaction.
+- [x] **Past Orders Page**
+  - [x] Build a page in the UI that displays the list of all past orders. The user should be able to click on any individual order to take them to a more detailed page of the transaction.
 
 
 ### Walkthrough Video

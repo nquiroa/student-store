@@ -43,11 +43,11 @@ Deployed Application (optional): [Student Store Deployed Site](ADD_LINK_HERE)
 
 #### STRETCH FEATURES
 
-- [ ] **Added Endpoints**
-  - [ ] Create an endpoint for fetching all orders in the database.
-  - [ ] Create an endpoint for serving an individual order based on its ID.
-- [ ] **Filter Orders**
-  - [ ] Allow users to use an input to filter orders by the email of the person who placed the order.
+- [x] **Added Endpoints**
+  - [x] Create an endpoint for fetching all orders in the database.
+  - [x] Create an endpoint for serving an individual order based on its ID.
+- [x] **Filter Orders**
+  - [x] Allow users to use an input to filter orders by the email of the person who placed the order.
 - [ ] **Implement Your Own Frontend**
   - [ ] Build your own user interface for browsing products, managing the shopping cart, and placing orders. This will involve integrating the frontend you create with the backend API you developed during the project.
 - [x] **Past Orders Page**

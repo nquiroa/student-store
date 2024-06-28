@@ -79,7 +79,7 @@ Second video is an updated video of the POST orders api endpoint, I inserted a p
 
 * Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
 
-The topics discussed in the labs provided a strong foundation for understanding key concepts needed to complete the assignment. Specifically, the labs on RESTful API design, Express routing, and database interactions using Prisma were instrumental in building the backend API. However, I felt somewhat unprepared for implementing complex filtering and sorting functionalities due to limited coverage in the labs. Additionally, integrating frontend and backend components seamlessly posed challenges that were not extensively covered.
+The topics discussed in the labs provided a strong foundation for understanding key concepts needed to complete the assignment. Specifically, the labs on RESTful API design, Express routing, and database interactions using Prisma were instrumental in building the backend API.
 
 * If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
   

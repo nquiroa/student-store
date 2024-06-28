@@ -2,7 +2,7 @@
 
 ## Unit Assignment: Student Store
 
-Submitted by: **NAME**
+Submitted by: **Nathan Quiroa**
 
 Deployed Application (optional): [Student Store Deployed Site](ADD_LINK_HERE)
 

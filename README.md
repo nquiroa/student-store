@@ -1,10 +1,6 @@
-📝 `NOTE` Use this template to initialize the contents of a README.md file for your application. As you work on your assignment over the course of the week, update the required or stretch features lists to indicate which features you have completed by changing `[ ]` to `[x]`. (🚫 Remove this paragraph before submitting your assignment.)
+Student Store
 
-## Unit Assignment: Student Store
-
-Submitted by: **Nathan Quiroa**
-
-Deployed Application (optional): [Student Store Deployed Site](ADD_LINK_HERE)
+by: **Nathan Quiroa**
 
 ### Application Features
 
@@ -48,8 +44,6 @@ Deployed Application (optional): [Student Store Deployed Site](ADD_LINK_HERE)
   - [x] Create an endpoint for serving an individual order based on its ID.
 - [x] **Filter Orders**
   - [x] Allow users to use an input to filter orders by the email of the person who placed the order.
-- [ ] **Implement Your Own Frontend**
-  - [ ] Build your own user interface for browsing products, managing the shopping cart, and placing orders. This will involve integrating the frontend you create with the backend API you developed during the project.
 - [x] **Past Orders Page**
   - [x] Build a page in the UI that displays the list of all past orders. The user should be able to click on any individual order to take them to a more detailed page of the transaction.
 
@@ -74,28 +68,4 @@ Deployed Application (optional): [Student Store Deployed Site](ADD_LINK_HERE)
     </a>
 </div>
 Second video is an updated video of the POST orders api endpoint, I inserted a product id wrong!
-
-### Reflection
-
-* Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
-
-The topics discussed in the labs provided a strong foundation for understanding key concepts needed to complete the assignment. Specifically, the labs on RESTful API design, Express routing, and database interactions using Prisma were instrumental in building the backend API.
-
-* If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
-  
-If I had more time, I would have added more advanced filtering and sorting options for the product listings to enhance user experience. I would also focus on implementing robust error handling and validation across the API to ensure more reliable and user-friendly interactions. Additionally, I would have liked to integrate user authentication and authorization features to secure the application. Improving the UI/UX design to make the frontend more intuitive and visually appealing would also be a priority.
-
-* Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
-
-The project demo went well overall, with the core functionalities working as expected and a smooth demonstration of the product browsing and order placement features. However, there were some minor issues with the responsiveness of the frontend and occasional delays in API responses. I noticed that a peer implemented a more dynamic search and filter feature, which provided instant feedback as users typed, and I would like to try incorporating a similar feature in the future. 
-
-### Open-source libraries used
-
-- W3schools
-
-### Shout out
-
-Give a shout out to somebody from your cohort that especially helped you during your project. This can be a fellow peer, instructor, TA, mentor, etc.
-
-shoutout to Erika and Alex!
 
